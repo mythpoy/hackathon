@@ -22,24 +22,25 @@ const url2 = '&units=metric&lang=kr';
 const weather_api_url = url + key + url2;
 
 app.get('/', (req, res) => {
-  let 시간대별_날씨 = []
-  request(weather_api_url, function (err, response, body) {
-    const jsonData = body;
-    const obj = JSON.parse(jsonData);
-    let 현재날짜 = new Date();
-    let date = 현재날짜.toLocaleString();
-    현재시각 = 현재날짜.getHours();
+  // let 시간대별_날씨 = []
+  // request(weather_api_url, function (err, response, body) {
+  //   const jsonData = body;
+  //   const obj = JSON.parse(jsonData);
+  //   let 현재날짜 = new Date();
+  //   let date = 현재날짜.toLocaleString();
+  //   현재시각 = 현재날짜.getHours();
 
-    for (let i = 0; i < 12; i++) {
-      let hours = 현재시각 + i;
-      if(hours > 24){
-        hours -= 24;
-      }
-      시간대별_날씨.push([hours, Math.round(obj.hourly[i].temp), Math.round(obj.hourly[i].feels_like), obj.hourly[i].weather[0].description, obj.hourly[i].humidity])
-    }
-
-    res.render('index', { hourly: 시간대별_날씨 , date:date})
-  })
+  //   for (let i = 0; i < 12; i++) {
+  //     let hours = 현재시각 + i;
+  //     if(hours > 24){
+  //       hours -= 24;
+  //     }
+      
+  //     시간대별_날씨.push([hours, Math.round(obj.hourly[i].temp), Math.round(obj.hourly[i].feels_like), obj.hourly[i].weather[0].description, obj.hourly[i].humidity])
+  //   }
+  // { hourly: 시간대별_날씨 , date:date}
+    res.render('index')
+  
   
 })
 

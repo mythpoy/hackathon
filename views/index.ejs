@@ -72,53 +72,10 @@
             <div class="art_name"><p>춘천서부시장</p></div>
         </a>
 
-        
-        
-
     </article>
 
 
-    <div id="weather">
-        <div id="plus_wrap1">
-            <p id="plus_content1">춘천 현재 날씨</p>
-        </div>
-        <table id="weather-table" class="table align-middle mt-1">
-            <thead class="table-info">
-            <tr>
-                <th>시간</th>
-                <% for(let i=0; i<hourly.length; i++) {%>
-                <td><%= hourly[i][0] %>시</td>
-                <% }%>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>온도</th>
-                <% for(let i=0; i<hourly.length; i++) {%>
-                <td><%= hourly[i][1] %>℃</td>
-                <% }%>
-            </tr>
-            <tr>
-                <th>체감온도</th>
-                <% for(let i=0; i<hourly.length; i++) {%>
-                <td><%= hourly[i][2] %>℃</td>
-                <% }%>
-            </tr>
-            <tr>
-                <th>습도</th>
-                <% for(let i=0; i<hourly.length; i++) {%>
-                <td><%= hourly[i][4] %>%</td>
-                <% }%>
-            </tr>
-            <tr>
-                <th>기상</th>
-                <% for(let i=0; i<hourly.length; i++) {%>
-                <td id="weatherTd"><%= hourly[i][3] %></td>
-                <% }%>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    
     <footer>
         <div id="footer_content">
             <p id="footer_title">INFORMATION</p>
